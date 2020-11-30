@@ -46,20 +46,15 @@
 	<li class="nav-item"><a class="nav-link collapsed" href="#"
 		data-toggle="collapse" data-target="#collapseUtilities"
 		aria-expanded="true" aria-controls="collapseUtilities"> <i
-			class="fas fa-users"></i> <span>企業功能資料管理</span>
+			class="fas fa-users"></i> <span>網站會員資料管理</span>
 	</a>
 		<div id="collapseUtilities" class="collapse"
 			aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
-				<h6 class="collapse-header">藝文活動服務:</h6>
-				<a class="collapse-item" href="<c:url value='/35/selectAll.ctrl' />">修改租借場地資訊</a> 
-				<a class="collapse-item" href="<c:url value='' />">修改贊助活動資訊</a>
+				<h6 class="collapse-header">會員資訊列表:</h6>
+				<a class="collapse-item" href="<c:url value='/35/memberEntry.ctrl' />">修改會員資訊</a> 
 			</div>
 		</div></li>
-
-
-
-
 
 	<!-- Nav Item - 一般功能 Menu -->
 	<!-- 票務相關 -->
@@ -165,7 +160,19 @@
 				<%-- 					<a class="collapse-item" href="<c:url value='/18/UpdateData.ctrl'/>">修改課程資料</a> --%>
 			</div>
 		</div></li>
-
+		
+	<li class="nav-item"><a class="nav-link collapsed" href="#"
+		data-toggle="collapse" data-target="#collapsePages6"
+		aria-expanded="true" aria-controls="collapseUtilities"> <i
+			class="fas fa-fw fa-chart-area"></i> <span>藝文場地管理</span>
+	</a>
+		<div id="collapsePages6" class="collapse"
+			aria-labelledby="headingPages" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<h6 class="collapse-header">場地資訊列表:</h6>
+				<a class="collapse-item" href="<c:url value='/35/selectAll.ctrl' />">修改租借場地資訊</a>
+			</div>
+		</div></li>
 
 	<!-- Nav Item - Charts -->
 	<li class="nav-item"><a class="nav-link" href="#"> <i

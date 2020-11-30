@@ -59,6 +59,19 @@ div {
 		<input type="button" onclick="navigate(this.id)" id="${addr}"
 			value="幫我導航">
 	</c:forEach>
+	<div>
+		<h1>台灣孩童的藝文指數</h1>
+		<br>
+		<form action="<c:url value='/35/founding.ctrl'/> " method="get">
+			<div class="searchBox">
+				<input type="text" class="" name="kidsLocation" value="">
+			</div>
+			<br>
+			<div class="submitButton">
+				<input type="submit" class="" name="submit" value="好奇嗎？點下去就對了">
+			</div>
+		</form>
+	</div>
 	<script type="text/javascript">
 
 // 	宣告一個名為navigete的箭頭函式，傳入參數是addr

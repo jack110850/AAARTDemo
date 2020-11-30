@@ -65,6 +65,7 @@
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
 						<li class="#"><a href="index.html">首頁</a></li>
+						<li><a href="<c:url value='/35/personelInfoEntry.ctrl' />">修改個人資訊</a></li>
 						<li><a href="<c:url value='/04/SearchOrder.ctrl' />">票卷訂單紀錄</a></li>
 						<li><a href="<c:url value='/14/showOrderList.ctrl' />">洋行購物紀錄</a></li>
 						<li><a href="#">商店預約紀錄</a></li>
@@ -76,8 +77,7 @@
 						</li>
 						<li><a href="#">藝人聘用紀錄</a></li>
 						<li><a href="#">課程購買紀錄</a></li>
-						<li><a href="#">贊助紀錄</a></li>
-						<li><a href="#">場地租借紀錄</a></li>
+						<li><a href="#">我設計的旅程</a></li>
 					</ul>
 				</nav>
 				<!-- #nav-menu-container -->

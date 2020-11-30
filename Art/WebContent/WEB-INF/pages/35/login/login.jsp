@@ -44,7 +44,7 @@ fieldset {
 					<h1 class="text-white">Login</h1>
 					<p class="text-white link-nav">
 						<a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span>
-						<a href="elements.html"> Login</a>
+						<a href="<c:url value='/35/loginEntry' />"> Login</a>
 					</p>
 				</div>
 			</div>
@@ -99,19 +99,19 @@ fieldset {
 		const CAPTCHA_CLIENT_SECRET = "6Lc_wOQZAAAAALKDlGGuMLE_iV-rjKJIYMHI9Fj6";
 		window.onload = () => {
 
-			// unsplash 上的圖片
-			let url = 'https://images.unsplash.com/photo-1513313778780-9ae4807465f0?auto=format&fit=crop&w=634&q=80'
-			fetch(url)
-			  .then((response) => {
-			    return response.blob();
-			  })
-			  .then((imageBlob) => {
-				console.log(imageBlob);
-			    let img = document.createElement('IMG')
-			    document.querySelector('.newImg').appendChild(img);
-			    // 將 blog 物件轉為 url
-			    img.src = URL.createObjectURL(imageBlob);
-			  })
+// 			// unsplash 上的圖片
+// 			let url = 'https://images.unsplash.com/photo-1513313778780-9ae4807465f0?auto=format&fit=crop&w=634&q=80'
+// 			fetch(url)
+// 			  .then((response) => {
+// 			    return response.blob();
+// 			  })
+// 			  .then((imageBlob) => {
+// 				console.log(imageBlob);
+// 			    let img = document.createElement('IMG')
+// 			    document.querySelector('.newImg').appendChild(img);
+// 			    // 將 blog 物件轉為 url
+// 			    img.src = URL.createObjectURL(imageBlob);
+// 			  })
 			
 			document.querySelector('.captcha').addEventListener('click', () => {
 						
@@ -131,21 +131,20 @@ fieldset {
 								if (message.score >= 0.8){
 									let pass = document.querySelector('.pass');
 									pass.style.display = "block";
-									pass.innerHTML="reCAPTCHA評分: "+message.score+"<br>驗證通過，您不是機器人<br>3秒後自動登入";
+									pass.innerHTML="reCAPTCHA評分: "+message.score+"<br>驗證通過，您不是機器人<br>2秒後自動登入";
 
 									let delayInMilliseconds = 1000; //1 second
 									setTimeout(() => {
 										 // code to be executed after 1 second
-										pass.innerHTML="reCAPTCHA評分: "+message.score+"<br>驗證通過，您不是機器人<br>2秒後自動登入";
+										pass.innerHTML="reCAPTCHA評分: "+message.score+"<br>驗證通過，您不是機器人<br>1秒後自動登入";
 										}, delayInMilliseconds);
+// 									setTimeout(() => {
+// 										pass.innerHTML="reCAPTCHA評分: "+message.score+"<br>驗證通過，您不是機器人<br>1秒後自動登入";
+// 										}, delayInMilliseconds+1000); 
 									setTimeout(() => {
 										 // code to be executed after 2 second
-										pass.innerHTML="reCAPTCHA評分: "+message.score+"<br>驗證通過，您不是機器人<br>1秒後自動登入";
-										}, delayInMilliseconds+1000);
-									setTimeout(() => {
-										 // code to be executed after 3 second
 										loginForm.submit();
-									}, delayInMilliseconds+2000);
+									}, delayInMilliseconds+1000);
 								}
 							});
 						}

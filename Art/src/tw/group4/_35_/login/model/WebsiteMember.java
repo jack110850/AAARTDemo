@@ -28,7 +28,7 @@ public class WebsiteMember {
 	@Column(name = "password")
 	private String password;
 	
-	@Transient
+	@Column(name = "realName" )
 	private String realName;
 	
 	@Column(name = "address")

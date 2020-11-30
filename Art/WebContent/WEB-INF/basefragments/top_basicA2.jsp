@@ -67,9 +67,8 @@
 						<li><a href="<c:url value='/14/test.ctrl' />">找商店</a></li>
 						<li><a href="<c:url value='/userStreetArtistPage.ctrl' />">找藝人</a></li>
 						<li><a href="<c:url value='/18/cSelectAllFront.ctrl' />">找課程</a></li>
-						<li><a href="#">企業贊助</a></li>
-						<li><a href="#">場地租借</a></li>
-						<li><a href="#">離我最近的活動</a></li>
+						<li><a href="<c:url value='/35/routePlanningEntry' />">藝起去郊遊</a></li>
+						<li><a href="<c:url value='/35/randomRecom.ctrl' />">離我最近的活動</a></li>
 <!-- 						<li class="menu-has-children"><a href="">Pages</a> -->
 <!-- 							<ul> -->
 <!-- 								<li><a href="#">Blog Single</a></li> -->

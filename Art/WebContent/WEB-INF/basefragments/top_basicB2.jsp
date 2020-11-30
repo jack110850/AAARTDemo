@@ -28,11 +28,6 @@
 
 <body>
 
-<!-- 購物車的初始化 -->
-<%if(pageContext.getRequest().getAttribute("carSize")==null){
-           	pageContext.getRequest().setAttribute("carSize", 0);
-} %>
-
 
 <header id="header" id="home"
 		style="font-family: cwTeXFangSong, serif;">
@@ -42,7 +37,7 @@
 				<div class="col-6 top-head-left">
 					<ul>
 						<li class="nav-item"><a class=""
-						href="<c:url value='/adminEnterMemberArea'/>"><img style='display:block; width:30px;height:20px;'
+						href="<c:url value='/35/personelInfoEntry.ctrl'/>"><img style='display:block; width:30px;height:20px;'
 						src="data:image/jpg;base64, ${sessionScope.memberPic}" ></a></li>
 						<li><a href="<c:url value='/adminEnterMemberArea'/>">你好！ ${sessionScope.member.getName()}</a></li>
 						<li><a href="<c:url value='/userEnterMemberArea'/>">會員專區</a></li>
@@ -75,9 +70,8 @@
 						<li><a href="#">找商店</a></li>
 						<li><a href="<c:url value='/userStreetArtistPage.ctrl' />">找藝人</a></li>
 						<li><a href="<c:url value='/18/cSelectAllFront.ctrl' />">找課程</a></li>
-						<li><a href="#">企業贊助</a></li>
-						<li><a href="#">場地租借</a></li>
-						<li><a href="#">離我最近的活動</a></li>
+						<li><a href="<c:url value='/35/routePlanningEntry' />">藝起去郊遊</a></li>
+						<li><a href="<c:url value='/35/randomRecom.ctrl' />">離我最近的活動</a></li>
 <!-- 						<li class="menu-has-children"><a href="">Pages</a> -->
 <!-- 							<ul> -->
 <!-- 								<li><a href="#">Blog Single</a></li> -->

@@ -246,49 +246,4 @@ public class TableForDB {
 		}
 	}
 	
-	//創Sponsorship表格
-	public void createTableSponsorship() {
-		
-		try (Connection connection = DataSourceConn.getDataSource().getConnection();) {
-			Statement stmt = connection.createStatement();
-			
-		    String sql = "CREATE TABLE Sponsorship"
-					   + "(id NUMBER generated always as identity(start with 1 increment by 1 nocache) primary key not null, "
-					+ " schoolName NVARCHAR2(50), "
-					+ " city NVARCHAR2(50), "
-					+ " district NVARCHAR2(50), "
-					+ " address NVARCHAR2(50), " 
-					+ " schoolType NVARCHAR2(50), " 
-					+ " childAmount NUMBER, "
-					+ " activityTime DATE, "
-					+ " activityType NVARCHAR2(50), "
-					+ " fee NUMBER, "
-					+ " announcementDate DATE, "
-					+ " contactInfo NVARCHAR2(50) "
-					+ " )";
-			
-			stmt.executeUpdate(sql);
-			System.out.println("Sponsorship表格已建立");
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	//刪ChildSponsorship表格
-	public void dropTableSponsorship() {
-		
-		try (Connection connection = DataSourceConn.getDataSource().getConnection();) {
-			Statement stmt = connection.createStatement();
-			
-			String sql = "DROP TABLE Sponsorship CASCADE CONSTRAINTS";
-			
-			stmt.executeUpdate(sql);
-			System.out.println("Sponsorship表格已刪除");
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-	
 }

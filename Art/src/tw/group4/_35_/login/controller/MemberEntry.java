@@ -25,5 +25,14 @@ public class MemberEntry {
 		
 		return IdentityFilter.loginID+"35/login/memberManagement";
 	}
+	
+	@GetMapping("/35/personelInfoEntry.ctrl")
+	public String personelInfoEntry(Model m){
+		
+		List<WebsiteMember> list = service.selectAllMembers();
+		m.addAttribute("membersList", list);
+		
+		return IdentityFilter.loginID+"35/login/personelInfoManagement";
+	}
 
 }

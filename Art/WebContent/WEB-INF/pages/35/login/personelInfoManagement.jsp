@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>會員資訊管理</title>
+<title>查看個人資訊</title>
 <style>
 .post {
 	display: none;
@@ -13,19 +13,27 @@
 </style>
 </head>
 <body>
+	<!-- start banner Area -->
+	<section class="banner-area relative" id="home">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">查看個人資訊</h1>
+					<p class="text-white link-nav">
+						<a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span>
+						<a href="<c:url value='/35/personelInfoEntry.ctrl' />">查看個人資訊</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
 	<br>
 	<div class="title">
-		<h1 align="center">會員資料列表</h1>
+		<h1 align="center">個人資料列表</h1>
 	</div>
-	<div class="back" align="right">
-		<form action="<c:url value='/35/returnHomePageF'/> " method="get">
-			<div class="submitButton">
-				<input type="submit" class="" name="submit" value="返回後台管理系統首頁">
-			</div>
-		</form>
-	</div>
-	<br>
-	<div class="add" align="right">
+<div class="add" align="right">
 		<input type="button" value="新增會員資料" onclick="add()">
 		<div class="post">
 			<table class="display table">

@@ -1,10 +1,10 @@
-package tw.group4._35_.initweb.model;
+package tw.group4._35_.unusedInitweb.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tw.group4._35_.initweb.dao.DataForDB;
-import tw.group4._35_.initweb.dao.TableForDB;
+import tw.group4._35_.unusedInitweb.dao.DataForDB;
+import tw.group4._35_.unusedInitweb.dao.TableForDB;
 
 @Service
 public class CreateTableInsertDataService {
