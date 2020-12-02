@@ -1,5 +1,6 @@
 package tw.group4._11_.ctrl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,11 +28,26 @@ public class ExtraController {
 	private UserSAService uService;
 	
 	@RequestMapping(path = "/userStreetArtistPage.ctrl" ,method = RequestMethod.GET)
-	public String showingSA(Model m) {
+	public String showingSA(
+			@RequestParam(name = "page" , required = false) Integer page,
+			Model m) {
 		
-		List<UserSABean> list = uService.selectAllSA();
+		if (page == null || page == 0) {
+			page =1;
+		}
+		
+		List<UserSABean> list = uService.selectPage(page);
+		int totalPage = uService.getTotlaPage();
+		
+		List<Integer> totlePages = new ArrayList<Integer>();
+		for (int i = 1; i <= totalPage; i++) {
+			totlePages.add(i);
+		}
 		
 		m.addAttribute("BeanList_SA",list);
+		m.addAttribute("PageMum",page);
+		m.addAttribute("totalPages",totalPage);
+		m.add
 		
 		return IdentityFilter.loginID+"_11_SA/NormalUser/Showing_2";
 	}
